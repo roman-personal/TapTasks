@@ -40,7 +40,7 @@ namespace TapTasks {
             sw.Stop();
             label1.Text = $"Lines count: {count}, elapsed: {sw.Elapsed}";
         }
-        // Открытие потока с большим буфеом и в асинхронном режиме - лучше с производительностью
+        // Открытие потока с большим буфером и в асинхронном режиме - лучше с производительностью
         private async Task<int> GetLinesCount2(string fileName) {
             if (string.IsNullOrEmpty(fileName))
                 throw new ArgumentException("Parameter should not be null or empty!", nameof(fileName));
