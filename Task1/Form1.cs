@@ -32,7 +32,6 @@ namespace TapTasks {
                 count++;
             }
             return count;
-
         }
     }
 }
