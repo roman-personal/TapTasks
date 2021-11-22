@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SourceFolder\java-the-legend.pdf" />
+    <None Remove="SourceFolder\jls8.pdf" />
+    <None Remove="SourceFolder\microservices-for-java-developers.pdf" />
+    <None Remove="SourceFolder\modern-java-ee-design-patterns.pdf" />
+    <None Remove="SourceFolder\object-oriented-vs-functional-programming.pdf" />
+    <None Remove="SourceFolder\Spring in action.pdf" />
+    <None Remove="TargetFolder\dummy.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="SourceFolder\java-the-legend.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SourceFolder\jls8.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SourceFolder\microservices-for-java-developers.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SourceFolder\modern-java-ee-design-patterns.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SourceFolder\object-oriented-vs-functional-programming.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SourceFolder\Spring in action.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TargetFolder\dummy.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
