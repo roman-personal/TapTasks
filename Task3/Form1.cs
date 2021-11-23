@@ -41,17 +41,17 @@ namespace Task3 {
                 var existingCells = workbook.Worksheets.SelectMany(sheet => sheet.GetExistingCells());
                 int progressCounter = 1000;
                 foreach (var cell in existingCells) {
-                    stat.TotalCount++;
+                    stat.Total++;
                     if (cell.HasFormula)
-                        stat.FormulaCount++;
+                        stat.Formula++;
                     if (cell.Value.IsText)
-                        stat.TextCount++;
+                        stat.Text++;
                     else if (cell.Value.IsNumeric)
-                        stat.NumericCount++;
+                        stat.Numeric++;
                     else if (cell.Value.IsError)
-                        stat.ErrorCount++;
+                        stat.Error++;
                     else if (cell.Value.IsBoolean)
-                        stat.BooleanCount++;
+                        stat.Boolean++;
                     progressCounter--;
                     if (progressCounter <= 0) {
                         progressCounter = 1000;
@@ -63,12 +63,12 @@ namespace Task3 {
         }
 
         private void DisplayWorkbookStat(WorkbookStat stat) {
-            lblTotal.Text = $"Total: {stat.TotalCount}";
-            lblFormula.Text = $"Formula: {stat.FormulaCount}";
-            lblText.Text = $"Text: {stat.TextCount}";
-            lblNumeric.Text = $"Numeric: {stat.NumericCount}";
-            lblError.Text = $"Error: {stat.ErrorCount}";
-            lblBoolean.Text = $"Boolean: {stat.BooleanCount}";
+            lblTotal.Text = $"Total: {stat.Total}";
+            lblFormula.Text = $"Formula: {stat.Formula}";
+            lblText.Text = $"Text: {stat.Text}";
+            lblNumeric.Text = $"Numeric: {stat.Numeric}";
+            lblError.Text = $"Error: {stat.Error}";
+            lblBoolean.Text = $"Boolean: {stat.Boolean}";
         }
 
         private void CleanWorkbookStat() {
