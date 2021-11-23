@@ -25,11 +25,11 @@
         private void InitializeComponent() {
             this.butRun = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.lblFormulas = new System.Windows.Forms.Label();
-            this.lblStrings = new System.Windows.Forms.Label();
-            this.lblNumerics = new System.Windows.Forms.Label();
-            this.lblErrors = new System.Windows.Forms.Label();
-            this.lblBooleans = new System.Windows.Forms.Label();
+            this.lblFormula = new System.Windows.Forms.Label();
+            this.lblText = new System.Windows.Forms.Label();
+            this.lblNumeric = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
+            this.lblBoolean = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.lblFile = new System.Windows.Forms.Label();
@@ -56,48 +56,48 @@
             // 
             // lblFormulas
             // 
-            this.lblFormulas.AutoSize = true;
-            this.lblFormulas.Location = new System.Drawing.Point(12, 110);
-            this.lblFormulas.Name = "lblFormulas";
-            this.lblFormulas.Size = new System.Drawing.Size(112, 15);
-            this.lblFormulas.TabIndex = 2;
-            this.lblFormulas.Text = "Formulas: unknown";
+            this.lblFormula.AutoSize = true;
+            this.lblFormula.Location = new System.Drawing.Point(12, 110);
+            this.lblFormula.Name = "lblFormulas";
+            this.lblFormula.Size = new System.Drawing.Size(112, 15);
+            this.lblFormula.TabIndex = 2;
+            this.lblFormula.Text = "Formula: unknown";
             // 
             // lblStrings
             // 
-            this.lblStrings.AutoSize = true;
-            this.lblStrings.Location = new System.Drawing.Point(12, 140);
-            this.lblStrings.Name = "lblStrings";
-            this.lblStrings.Size = new System.Drawing.Size(99, 15);
-            this.lblStrings.TabIndex = 3;
-            this.lblStrings.Text = "Strings: unknown";
+            this.lblText.AutoSize = true;
+            this.lblText.Location = new System.Drawing.Point(12, 140);
+            this.lblText.Name = "lblStrings";
+            this.lblText.Size = new System.Drawing.Size(99, 15);
+            this.lblText.TabIndex = 3;
+            this.lblText.Text = "Text: unknown";
             // 
             // lblNumerics
             // 
-            this.lblNumerics.AutoSize = true;
-            this.lblNumerics.Location = new System.Drawing.Point(12, 170);
-            this.lblNumerics.Name = "lblNumerics";
-            this.lblNumerics.Size = new System.Drawing.Size(114, 15);
-            this.lblNumerics.TabIndex = 4;
-            this.lblNumerics.Text = "Numerics: unknown";
+            this.lblNumeric.AutoSize = true;
+            this.lblNumeric.Location = new System.Drawing.Point(12, 170);
+            this.lblNumeric.Name = "lblNumerics";
+            this.lblNumeric.Size = new System.Drawing.Size(114, 15);
+            this.lblNumeric.TabIndex = 4;
+            this.lblNumeric.Text = "Numeric: unknown";
             // 
             // lblErrors
             // 
-            this.lblErrors.AutoSize = true;
-            this.lblErrors.Location = new System.Drawing.Point(12, 200);
-            this.lblErrors.Name = "lblErrors";
-            this.lblErrors.Size = new System.Drawing.Size(93, 15);
-            this.lblErrors.TabIndex = 5;
-            this.lblErrors.Text = "Errors: unknown";
+            this.lblError.AutoSize = true;
+            this.lblError.Location = new System.Drawing.Point(12, 200);
+            this.lblError.Name = "lblErrors";
+            this.lblError.Size = new System.Drawing.Size(93, 15);
+            this.lblError.TabIndex = 5;
+            this.lblError.Text = "Error: unknown";
             // 
             // lblBooleans
             // 
-            this.lblBooleans.AutoSize = true;
-            this.lblBooleans.Location = new System.Drawing.Point(12, 230);
-            this.lblBooleans.Name = "lblBooleans";
-            this.lblBooleans.Size = new System.Drawing.Size(111, 15);
-            this.lblBooleans.TabIndex = 6;
-            this.lblBooleans.Text = "Booleans: unknown";
+            this.lblBoolean.AutoSize = true;
+            this.lblBoolean.Location = new System.Drawing.Point(12, 230);
+            this.lblBoolean.Name = "lblBooleans";
+            this.lblBoolean.Size = new System.Drawing.Size(111, 15);
+            this.lblBoolean.TabIndex = 6;
+            this.lblBoolean.Text = "Boolean: unknown";
             // 
             // openFileDialog1
             // 
@@ -130,11 +130,11 @@
             this.ClientSize = new System.Drawing.Size(440, 267);
             this.Controls.Add(this.lblFile);
             this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.lblBooleans);
-            this.Controls.Add(this.lblErrors);
-            this.Controls.Add(this.lblNumerics);
-            this.Controls.Add(this.lblStrings);
-            this.Controls.Add(this.lblFormulas);
+            this.Controls.Add(this.lblBoolean);
+            this.Controls.Add(this.lblError);
+            this.Controls.Add(this.lblNumeric);
+            this.Controls.Add(this.lblText);
+            this.Controls.Add(this.lblFormula);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.butRun);
             this.Name = "Form1";
@@ -148,11 +148,11 @@
 
         private System.Windows.Forms.Button butRun;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Label lblFormulas;
-        private System.Windows.Forms.Label lblStrings;
-        private System.Windows.Forms.Label lblNumerics;
-        private System.Windows.Forms.Label lblErrors;
-        private System.Windows.Forms.Label lblBooleans;
+        private System.Windows.Forms.Label lblFormula;
+        private System.Windows.Forms.Label lblText;
+        private System.Windows.Forms.Label lblNumeric;
+        private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Label lblBoolean;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label lblFile;

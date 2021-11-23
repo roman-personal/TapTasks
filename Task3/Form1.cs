@@ -41,19 +41,19 @@ namespace Task3 {
                 var existingCells = workbook.Worksheets.SelectMany(sheet => sheet.GetExistingCells());
                 int progressCounter = 1000;
                 foreach (var cell in existingCells) {
-                    stat.Total++;
+                    stat.TotalCount++;
                     if (cell.HasFormula)
-                        stat.Formulas++;
+                        stat.FormulaCount++;
                     if (cell.Value.IsText)
-                        stat.Strings++;
+                        stat.TextCount++;
                     else if (cell.Value.IsNumeric)
-                        stat.Numerics++;
+                        stat.NumericCount++;
                     else if (cell.Value.IsNumeric)
-                        stat.Numerics++;
+                        stat.NumericCount++;
                     else if (cell.Value.IsError)
-                        stat.Errors++;
+                        stat.ErrorCount++;
                     else if (cell.Value.IsBoolean)
-                        stat.Booleans++;
+                        stat.BooleanCount++;
                     progressCounter--;
                     if (progressCounter <= 0) {
                         progressCounter = 1000;
@@ -65,21 +65,21 @@ namespace Task3 {
         }
 
         private void DisplayWorkbookStat(WorkbookStat stat) {
-            lblTotal.Text = $"Total: {stat.Total}";
-            lblFormulas.Text = $"Formulas: {stat.Formulas}";
-            lblStrings.Text = $"Strings: {stat.Strings}";
-            lblNumerics.Text = $"Numerics: {stat.Numerics}";
-            lblErrors.Text = $"Errors: {stat.Errors}";
-            lblBooleans.Text = $"Booleans: {stat.Booleans}";
+            lblTotal.Text = $"Total: {stat.TotalCount}";
+            lblFormula.Text = $"Formula: {stat.FormulaCount}";
+            lblText.Text = $"Text: {stat.TextCount}";
+            lblNumeric.Text = $"Numeric: {stat.NumericCount}";
+            lblError.Text = $"Error: {stat.ErrorCount}";
+            lblBoolean.Text = $"Boolean: {stat.BooleanCount}";
         }
 
         private void CleanWorkbookStat() {
             lblTotal.Text = "Total: unknown";
-            lblFormulas.Text = "Formulas: unknown";
-            lblStrings.Text = "Strings: unknown";
-            lblNumerics.Text = "Numerics: unknown";
-            lblErrors.Text = "Errors: unknown";
-            lblBooleans.Text = "Booleans: unknown";
+            lblFormula.Text = "Formula: unknown";
+            lblText.Text = "Text: unknown";
+            lblNumeric.Text = "Numeric: unknown";
+            lblError.Text = "Error: unknown";
+            lblBoolean.Text = "Boolean: unknown";
         }
     }
 }
