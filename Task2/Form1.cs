@@ -12,7 +12,7 @@ namespace Task2 {
             InitializeComponent();
         }
 
-        async Task CopyFilesAsync(string sourceFolder, string targetFolder, CancellationToken cancellationToken, IProgress<string> progress) {
+        private async Task CopyFilesAsync(string sourceFolder, string targetFolder, CancellationToken cancellationToken, IProgress<string> progress) {
             foreach (string filepath in Directory.EnumerateFiles(sourceFolder)) {
                 string filename = Path.GetFileName(filepath);
                 using var sourceStream = File.Open(filepath, FileMode.Open);
@@ -27,7 +27,7 @@ namespace Task2 {
             cts = new CancellationTokenSource();
             try {
                 await CopyFilesAsync("SourceFolder", "TargetFolder", cts.Token,
-                    new Progress<string>((filename) => listBox1.Items.Add(filename)));
+                    new Progress<string>(filename => listBox1.Items.Add(filename)));
             }
             catch (OperationCanceledException ex) {
                 MessageBox.Show(ex.Message);

@@ -35,12 +35,12 @@ namespace Task3 {
             }
         }
 
-        Task<WorkbookStat> GetWorkbookStat(Workbook workbook, IProgress<WorkbookStat> progress) {
+        private Task<WorkbookStat> GetWorkbookStat(Workbook workbook, IProgress<WorkbookStat> progress) {
             return Task.Run(() => {
                 var stat = new WorkbookStat();
-                var query = workbook.Worksheets.SelectMany(sheet => sheet.GetExistingCells());
+                var existingCells = workbook.Worksheets.SelectMany(sheet => sheet.GetExistingCells());
                 int progressCounter = 1000;
-                foreach (var cell in query) {
+                foreach (var cell in existingCells) {
                     stat.Total++;
                     if (cell.HasFormula)
                         stat.Formulas++;
@@ -64,7 +64,7 @@ namespace Task3 {
             });
         }
 
-        void DisplayWorkbookStat(WorkbookStat stat) {
+        private void DisplayWorkbookStat(WorkbookStat stat) {
             lblTotal.Text = $"Total: {stat.Total}";
             lblFormulas.Text = $"Formulas: {stat.Formulas}";
             lblStrings.Text = $"Strings: {stat.Strings}";
@@ -73,7 +73,7 @@ namespace Task3 {
             lblBooleans.Text = $"Booleans: {stat.Booleans}";
         }
 
-        void CleanWorkbookStat() {
+        private void CleanWorkbookStat() {
             lblTotal.Text = "Total: unknown";
             lblFormulas.Text = "Formulas: unknown";
             lblStrings.Text = "Strings: unknown";
