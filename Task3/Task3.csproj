@@ -8,16 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="test.xlsx" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="test.xlsx">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="DevExpress.Document.Processor" Version="21.2.3" />
   </ItemGroup>
 

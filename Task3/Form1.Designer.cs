@@ -30,6 +30,9 @@
             this.lblNumerics = new System.Windows.Forms.Label();
             this.lblErrors = new System.Windows.Forms.Label();
             this.lblBooleans = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.lblFile = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // butRun
@@ -45,7 +48,7 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(12, 49);
+            this.lblTotal.Location = new System.Drawing.Point(12, 80);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(88, 15);
             this.lblTotal.TabIndex = 1;
@@ -54,7 +57,7 @@
             // lblFormulas
             // 
             this.lblFormulas.AutoSize = true;
-            this.lblFormulas.Location = new System.Drawing.Point(12, 74);
+            this.lblFormulas.Location = new System.Drawing.Point(12, 110);
             this.lblFormulas.Name = "lblFormulas";
             this.lblFormulas.Size = new System.Drawing.Size(112, 15);
             this.lblFormulas.TabIndex = 2;
@@ -63,7 +66,7 @@
             // lblStrings
             // 
             this.lblStrings.AutoSize = true;
-            this.lblStrings.Location = new System.Drawing.Point(12, 98);
+            this.lblStrings.Location = new System.Drawing.Point(12, 140);
             this.lblStrings.Name = "lblStrings";
             this.lblStrings.Size = new System.Drawing.Size(99, 15);
             this.lblStrings.TabIndex = 3;
@@ -72,7 +75,7 @@
             // lblNumerics
             // 
             this.lblNumerics.AutoSize = true;
-            this.lblNumerics.Location = new System.Drawing.Point(12, 122);
+            this.lblNumerics.Location = new System.Drawing.Point(12, 170);
             this.lblNumerics.Name = "lblNumerics";
             this.lblNumerics.Size = new System.Drawing.Size(114, 15);
             this.lblNumerics.TabIndex = 4;
@@ -81,7 +84,7 @@
             // lblErrors
             // 
             this.lblErrors.AutoSize = true;
-            this.lblErrors.Location = new System.Drawing.Point(12, 148);
+            this.lblErrors.Location = new System.Drawing.Point(12, 200);
             this.lblErrors.Name = "lblErrors";
             this.lblErrors.Size = new System.Drawing.Size(93, 15);
             this.lblErrors.TabIndex = 5;
@@ -90,17 +93,43 @@
             // lblBooleans
             // 
             this.lblBooleans.AutoSize = true;
-            this.lblBooleans.Location = new System.Drawing.Point(12, 176);
+            this.lblBooleans.Location = new System.Drawing.Point(12, 230);
             this.lblBooleans.Name = "lblBooleans";
             this.lblBooleans.Size = new System.Drawing.Size(111, 15);
             this.lblBooleans.TabIndex = 6;
             this.lblBooleans.Text = "Booleans: unknown";
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.DefaultExt = "xlsx";
+            this.openFileDialog1.Filter = "Excel files|*.xlsx;*.xls;*.xlsb;*.csv";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar1.Location = new System.Drawing.Point(103, 12);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(325, 23);
+            this.progressBar1.TabIndex = 7;
+            this.progressBar1.Visible = false;
+            // 
+            // lblFile
+            // 
+            this.lblFile.AutoSize = true;
+            this.lblFile.Location = new System.Drawing.Point(12, 50);
+            this.lblFile.Name = "lblFile";
+            this.lblFile.Size = new System.Drawing.Size(81, 15);
+            this.lblFile.TabIndex = 8;
+            this.lblFile.Text = "File: unknown";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 223);
+            this.ClientSize = new System.Drawing.Size(440, 267);
+            this.Controls.Add(this.lblFile);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.lblBooleans);
             this.Controls.Add(this.lblErrors);
             this.Controls.Add(this.lblNumerics);
@@ -124,5 +153,8 @@
         private System.Windows.Forms.Label lblNumerics;
         private System.Windows.Forms.Label lblErrors;
         private System.Windows.Forms.Label lblBooleans;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label lblFile;
     }
 }
