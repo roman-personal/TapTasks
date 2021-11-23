@@ -48,8 +48,6 @@ namespace Task3 {
                         stat.TextCount++;
                     else if (cell.Value.IsNumeric)
                         stat.NumericCount++;
-                    else if (cell.Value.IsNumeric)
-                        stat.NumericCount++;
                     else if (cell.Value.IsError)
                         stat.ErrorCount++;
                     else if (cell.Value.IsBoolean)
