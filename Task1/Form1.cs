@@ -26,7 +26,7 @@ namespace TapTasks {
             using var reader = File.OpenText(fileName);
             int count = 0;
             while (true) {
-                string? line = await reader.ReadLineAsync();
+                string? line = await reader.ReadLineAsync().ConfigureAwait(false);
                 if (line == null)
                     break;
                 count++;
@@ -48,7 +48,7 @@ namespace TapTasks {
             using var reader = new StreamReader(fs);
             int count = 0;
             while (true) {
-                string? line = await reader.ReadLineAsync();
+                string? line = await reader.ReadLineAsync().ConfigureAwait(false);
                 if (line == null)
                     break;
                 count++;
