@@ -22,7 +22,7 @@ namespace Task3 {
                             progressBar1.Value = progress;
                             progressBar1.Visible = true;
                         }));
-                    var stat = await GetWorkbookStat(workbook, new Progress<WorkbookStat>(s => DisplayWorkbookStat(s)));
+                    var stat = await GetWorkbookStatAsync(workbook, new Progress<WorkbookStat>(s => DisplayWorkbookStat(s)));
                     DisplayWorkbookStat(stat);
                 }
                 catch (Exception ex) {
@@ -35,7 +35,7 @@ namespace Task3 {
             }
         }
 
-        private Task<WorkbookStat> GetWorkbookStat(Workbook workbook, IProgress<WorkbookStat> progress) {
+        private Task<WorkbookStat> GetWorkbookStatAsync(Workbook workbook, IProgress<WorkbookStat> progress) {
             return Task.Run(() => {
                 var stat = new WorkbookStat();
                 var existingCells = workbook.Worksheets.SelectMany(sheet => sheet.GetExistingCells());
